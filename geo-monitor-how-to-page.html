@@ -437,6 +437,8 @@
 
       <p>I wanted to be able to routinely ask a list of the questions that our users and prospects would ask in natural language, and have the monitor show me whether our brand name was served up in an answer by any or all the key AI tools, which I'll refer to as LLMs (large language models) or "models". I chose to limit my searches to ChatGPT, Google Gemini, Claude, and Perplexity. I learned early that Google or Bing AI Overviews work on a different system and could not be included in these results – this monitor can only measure what happens when users directly query one of these LLMs, not just search on Google or Bing.</p>
 
+      <p>I knew my list of questions would be large, as I had eight questions that a user/prospect might typically ask about where to find sources of real estate data, and I wanted to apply each of those to six key geographic areas. For example, "Where can I find data on recent home sales [in Vancouver]?" So, those eight questions became 48. I also added a couple of national-only questions, and all those questions have to be asked of four separate LLMs, so that's around 200 individual queries – far more than I could ask manually.</p>
+
       <p>I gave instructions to build a results page that showed where our brand did and didn't show up for each of those queries ("Mentions" vs "Missed") and display a trend graph over time so that we could map improvements or declines.</p>
       <p>I told Claude that I wanted the dashboard results to be filterable by region and by LLM, so that I can see what users/prospects in Vancouver see when asking ChatGPT, versus Toronto users asking Gemini, for example.</p>
       <p>I also wanted the monitor to report when our competitors' brands showed up in those same search results, and give me a separate colour-coded bar chart of those competitor mentions. As those results came from the same queries, there were no additional queries added, just a new way of parsing the results.</p>
@@ -488,6 +490,16 @@
     </div>
   </section>
 
+  <section class="section">
+    <h2>Limitations of the Monitor</h2>
+    <div class="section-body">
+      <p>We cannot measure the accuracy of the AI responses. What we know is that the responses reflect what those specific AI models said, to those specific queries, to those specific users, in a specific location, on that specific day. LLM outputs are inherently non-deterministic, which means the same query can get a different answer on different days. We're not claiming to capture every possible AI interaction involving our brand. We also can't detect when an AI model hallucinates a mention of our brand — or incorrectly omits one, or says something incorrect about our brand.</p>
+      <p>What we're doing is capturing a consistent, repeatable sample over time. The value is in the trend, in comparisons over time and against competitors, not in the absolute number or as a precise audit. Also, remember that the queries you input don't have to include every possible wording of that question - LLMs are smart enough to figure out the variants.</p>
+      <p>In the process of doing monthly spot-checks (per the instructions) on the results of a scan, you may find that asking the same question directly of an LLM could bring up a different result. In those instances, it can be hard to use the monitor's results to identify next steps.</p>
+      <p>For example, if you see that ChatGTP is excluding your brand from results of a key question, you might want to run that question in ChatGPT yourself to see where it is pulling its answers from. In doing so, it might mention your brand this time, when queried directly, or offer a different mention. Most of the time, you will get a similar result to the monitor, and you can explore where there might be an opportunity to improve. But, again, this monitor is more about overall directional trends and relative competitive performance than it is about identifying exact numbers and opportunities.</p>
+    </div>
+  </section>
+
   <section class="lessons">
     <h2>Key lessons learned (mostly the hard way)</h2>
     <div class="lessons-grid">
@@ -528,7 +540,7 @@
       </div>
       <div class="lesson-card">
         <p class="lesson-num">Lesson 08</p>
-        <h4>Clear your results history after major changes</h4>
+        <h4>Clear your results history if you change your setup/queries/LLMs significantly</h4>
         <p>Scan data stored before a major change won't have the same structure or results as new data, which causes confusing gaps and inconsistencies in your charts.</p>
       </div>
     </div>
@@ -539,7 +551,7 @@
       <p class="cta-eyebrow">Step-by-step instructions</p>
       <h2>Want to try building one yourself?</h2>
       <p>Here are full step-by-step instructions, written by Claude after learning everything from our process. No guarantees that it will be perfect for you first time and free from bugs – there's always something, and your requirements will differ from mine! But this will get you past some of the key errors that I made. Good luck!</p>
-      <a href="geo-instructions.pdf" class="download-btn" download>
+      <a href="geo-monitor-setup-instructions.pdf" class="download-btn" download>
         <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M8 1v9M5 7l3 3 3-3M2 11v1a2 2 0 002 2h8a2 2 0 002-2v-1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
